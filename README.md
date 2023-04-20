@@ -1,10 +1,10 @@
 # JWT example utility
 
-Clone this repo and cd to jwt-utility directory. The utility has only been tested in Ubuntu Linux LTS 22.04 with python 3.9.9.
+Clone this repo and cd to the jwt-utility directory. This code has only been tested in Ubuntu Linux LTS 22.04 with python 3.9.9.
 
 ## Command Line Use:
 
-I recommend that create a virtual environment using your preferred method.
+I recommend that you create a virtual environment using your preferred method to do so.
 Install dependencies:
 
 ```
@@ -64,4 +64,4 @@ curl -X GET http://localhost:8080/validate-jwt/{JWT}
 
 ## Note on securely storing secret keys
 
-Personally, I like neither hard-coded keys nor environment variables for key storage. I prefer to use a key store frmm which I can programmatically retrieve secrets. This can be achieved easily in linux with the [**pass**](https://www.passwordstore.org) package. In MacOS, they can be stored in the keychain. Keys can be retrieved from either with the [**keyring**](https://pypi.org/project/keyring). Another option is to use the cloud with solutions like [**AWS Secrets-Manager**](https://aws.amazon.com/secrets-manager).
+Personally, I like neither hard-coded keys, nor environment variables for key storage. I prefer to use a key store from which I can programmatically retrieve secrets. This can be easily achieved in linux with the [**pass**](https://www.passwordstore.org) package. In MacOS, they can be stored in the keychain. Keys can be retrieved from the keychain or pass store with the [**keyring**](https://pypi.org/project/keyring) python module. Another option is to use cloud solutions like [**AWS Secrets-Manager**](https://aws.amazon.com/secrets-manager).
